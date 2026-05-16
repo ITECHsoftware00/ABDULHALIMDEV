@@ -1,0 +1,88 @@
+<h2>Pick a visual direction</h2>
+<p class="subtitle">Same content, three radically different vibes. Click the one that feels most "you" as a Senior Software Architect.</p>
+
+<style>
+  .vd-card { display:flex; flex-direction:column; cursor:pointer; border-radius:12px; overflow:hidden; border:2px solid transparent; transition:transform .2s, border-color .2s; }
+  .vd-card:hover { transform: translateY(-4px); }
+  .vd-card.selected { border-color:#ff5722; }
+  .vd-preview { aspect-ratio: 4/3; padding:18px; display:flex; flex-direction:column; justify-content:space-between; font-family:ui-sans-serif, system-ui, -apple-system, sans-serif; }
+  .vd-meta { padding:14px 16px; background:#1a1a1a; color:#fff; }
+  .vd-meta h3 { margin:0 0 6px; font-size:15px; font-weight:600; }
+  .vd-meta p { margin:0; font-size:12px; color:#aaa; line-height:1.4; }
+
+  /* A — Designer Mirror (dvdrod) */
+  .vd-a { background:#0a0a0a; color:#f4f1e8; }
+  .vd-a .navrow { display:flex; justify-content:space-between; font-size:9px; letter-spacing:.12em; opacity:.7; }
+  .vd-a .hero { font-family:'Arial Black', sans-serif; font-weight:900; font-size:54px; line-height:.85; letter-spacing:-.04em; }
+  .vd-a .hero span { color:#ff4419; }
+  .vd-a .footrow { display:flex; justify-content:space-between; font-size:8px; letter-spacing:.15em; opacity:.5; }
+
+  /* B — Architect Modern (Linear/Vercel) */
+  .vd-b { background:linear-gradient(135deg,#0b0d12 0%,#141821 100%); color:#e6e8ec; position:relative; overflow:hidden; }
+  .vd-b::before { content:''; position:absolute; inset:0; background:radial-gradient(600px circle at 80% 0%, rgba(120,140,255,.15), transparent 40%); }
+  .vd-b > * { position:relative; }
+  .vd-b .navrow { display:flex; justify-content:space-between; font-size:9px; color:#7a8090; }
+  .vd-b .navrow span { font-family:ui-monospace,monospace; }
+  .vd-b .hero { font-family:'Inter',sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-.02em; }
+  .vd-b .hero .accent { background:linear-gradient(90deg,#a5b4ff,#7c8bff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .vd-b .sub { font-size:10px; color:#9aa0b0; margin-top:6px; }
+  .vd-b .pill { display:inline-block; padding:3px 8px; border:1px solid rgba(255,255,255,.1); border-radius:99px; font-size:8px; color:#9aa0b0; font-family:ui-monospace,monospace; margin-right:4px; }
+
+  /* C — Brutalist Engineer (Rauno/Bun) */
+  .vd-c { background:#fafaf7; color:#0a0a0a; font-family:ui-monospace,'SF Mono',monospace; }
+  .vd-c .navrow { display:flex; justify-content:space-between; font-size:9px; text-transform:uppercase; border-bottom:1px solid #0a0a0a; padding-bottom:6px; }
+  .vd-c .hero { font-family:'Arial Black',sans-serif; font-size:38px; line-height:.95; font-weight:900; letter-spacing:-.03em; margin-top:auto; }
+  .vd-c .grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; border-top:1px solid #0a0a0a; padding-top:6px; font-size:8px; text-transform:uppercase; }
+  .vd-c .grid div { padding:0; }
+  .vd-c .marker { display:inline-block; width:6px; height:6px; background:#0a0a0a; margin-right:4px; vertical-align:middle; }
+</style>
+
+<div class="cards" style="grid-template-columns:repeat(3,1fr);">
+
+  <div class="card vd-card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="vd-preview vd-a">
+      <div class="navrow"><span>abdulhalim/</span><span>WORK · ABOUT · CONTACT</span></div>
+      <div class="hero">Build<br>at<br>scale<span>.</span></div>
+      <div class="footrow"><span>● AVAILABLE</span><span>SCROLL ↓</span></div>
+    </div>
+    <div class="vd-meta">
+      <h3>A — Designer Mirror</h3>
+      <p>Pure black, massive display type, one bold accent. Closest to dvdrod. Loud, opinionated, design-forward.</p>
+    </div>
+  </div>
+
+  <div class="card vd-card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="vd-preview vd-b">
+      <div class="navrow"><span>~/abdulhalim</span><span>work · writing · contact</span></div>
+      <div>
+        <div class="hero">Senior Software<br><span class="accent">Architect.</span></div>
+        <div class="sub">Designing systems that scale to millions.</div>
+        <div style="margin-top:8px"><span class="pill">TypeScript</span><span class="pill">AWS</span><span class="pill">K8s</span></div>
+      </div>
+      <div></div>
+    </div>
+    <div class="vd-meta">
+      <h3>B — Architect Modern</h3>
+      <p>Dark slate with subtle gradient, refined type, mono accents, tech pills. Linear / Vercel / Resend energy. Engineer-credible.</p>
+    </div>
+  </div>
+
+  <div class="card vd-card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="vd-preview vd-c">
+      <div class="navrow"><span>[01] ABDULHALIM.M</span><span>WORK / ABOUT / CV</span></div>
+      <div class="hero">Senior<br>Software<br>Architect</div>
+      <div class="grid">
+        <div><span class="marker"></span>BERLIN</div>
+        <div><span class="marker"></span>2019—NOW</div>
+        <div><span class="marker"></span>OPEN TO WORK</div>
+      </div>
+    </div>
+    <div class="vd-meta">
+      <h3>C — Brutalist Engineer</h3>
+      <p>Light/cream, mono type, sharp grids, technical labels. Rauno Freiberg / Bun.sh feel. Rare, technical, taste-signaling.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:24px">My recommendation: <strong>B (Architect Modern)</strong> — closest to "Senior Software Architect" credibility while still feeling premium. A is more designer; C is more niche tech-aesthete. But the call is yours.</p>

@@ -1,0 +1,93 @@
+<h2>Pick your accent color</h2>
+<p class="subtitle">Brutalist palettes live or die by a single signature accent. Same layout, four accents — pick one. (I'll auto-derive a dark-mode variant for the toggle.)</p>
+
+<style>
+  .pal-card { display:flex; flex-direction:column; cursor:pointer; border-radius:12px; overflow:hidden; border:2px solid transparent; transition:transform .2s, border-color .2s; background:transparent; }
+  .pal-card:hover { transform: translateY(-4px); }
+  .pal-card.selected { border-color:#0a0a0a; }
+  .pal-preview { aspect-ratio: 4/3; padding:18px; display:flex; flex-direction:column; justify-content:space-between; background:#f5f1e8; color:#0a0a0a; font-family:ui-monospace,'SF Mono',monospace; position:relative; }
+  .pal-preview .nav { display:flex; justify-content:space-between; font-size:9px; text-transform:uppercase; border-bottom:1px solid #0a0a0a; padding-bottom:6px; }
+  .pal-preview .hero { font-family:'Arial Black',sans-serif; font-size:42px; line-height:.9; font-weight:900; letter-spacing:-.03em; margin-top:auto; }
+  .pal-preview .hero .accent-word { color:var(--acc); }
+  .pal-preview .underline { height:3px; background:var(--acc); margin-top:6px; width:60%; }
+  .pal-preview .meta { display:flex; gap:8px; margin-top:8px; font-size:8px; text-transform:uppercase; }
+  .pal-preview .dot { display:inline-block; width:8px; height:8px; background:var(--acc); border-radius:50%; margin-right:4px; vertical-align:middle; }
+  .pal-preview .badge { padding:2px 6px; border:1px solid #0a0a0a; }
+  .pal-preview .badge-acc { background:var(--acc); color:#0a0a0a; border-color:var(--acc); }
+  .pal-meta { padding:14px 16px; background:#1a1a1a; color:#fff; }
+  .pal-meta h3 { margin:0 0 6px; font-size:15px; font-weight:600; display:flex; align-items:center; gap:8px; }
+  .pal-meta .swatch { width:14px; height:14px; border-radius:3px; }
+  .pal-meta p { margin:0; font-size:12px; color:#aaa; line-height:1.4; }
+
+  .pal-a { --acc:#ff3b14; }
+  .pal-b { --acc:#0066ff; }
+  .pal-c { --acc:#c8ff00; }
+  .pal-d { --acc:#0a0a0a; }
+  .pal-d .underline { background:#0a0a0a; }
+</style>
+
+<div class="cards" style="grid-template-columns:repeat(2,1fr); gap:18px;">
+
+  <div class="card pal-card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="pal-preview pal-a">
+      <div class="nav"><span>● ABDULHALIM.M</span><span>WORK / ABOUT / CV</span></div>
+      <div>
+        <div class="hero">Senior<br>Software<br><span class="accent-word">Architect</span></div>
+        <div class="underline"></div>
+        <div class="meta"><span class="badge"><span class="dot"></span>OPEN TO WORK</span><span class="badge badge-acc">2025</span></div>
+      </div>
+    </div>
+    <div class="pal-meta">
+      <h3><span class="swatch" style="background:#ff3b14"></span>A — Signal Red</h3>
+      <p>Hot, urgent, confident. Reads as "I ship things that matter." Closest to the dvdrod inspiration's accent energy.</p>
+    </div>
+  </div>
+
+  <div class="card pal-card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="pal-preview pal-b">
+      <div class="nav"><span>● ABDULHALIM.M</span><span>WORK / ABOUT / CV</span></div>
+      <div>
+        <div class="hero">Senior<br>Software<br><span class="accent-word">Architect</span></div>
+        <div class="underline"></div>
+        <div class="meta"><span class="badge"><span class="dot"></span>OPEN TO WORK</span><span class="badge badge-acc">2025</span></div>
+      </div>
+    </div>
+    <div class="pal-meta">
+      <h3><span class="swatch" style="background:#0066ff"></span>B — Electric Blue</h3>
+      <p>Engineering classic. Trustworthy, technical, "Stripe / Linear" energy. Safe but premium.</p>
+    </div>
+  </div>
+
+  <div class="card pal-card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="pal-preview pal-c">
+      <div class="nav"><span>● ABDULHALIM.M</span><span>WORK / ABOUT / CV</span></div>
+      <div>
+        <div class="hero">Senior<br>Software<br><span class="accent-word">Architect</span></div>
+        <div class="underline"></div>
+        <div class="meta"><span class="badge"><span class="dot"></span>OPEN TO WORK</span><span class="badge badge-acc">2025</span></div>
+      </div>
+    </div>
+    <div class="pal-meta">
+      <h3><span class="swatch" style="background:#c8ff00"></span>C — Hazard Lime</h3>
+      <p>Sharp, modern, terminal-vibes. Reads as Bun.sh / Vercel-ship / "I work close to the metal." High taste-signal.</p>
+    </div>
+  </div>
+
+  <div class="card pal-card" data-choice="d" onclick="toggleSelect(this)">
+    <div class="pal-preview pal-d">
+      <div class="nav"><span>● ABDULHALIM.M</span><span>WORK / ABOUT / CV</span></div>
+      <div>
+        <div class="hero">Senior<br>Software<br><span class="accent-word">Architect</span></div>
+        <div class="underline"></div>
+        <div class="meta"><span class="badge"><span class="dot"></span>OPEN TO WORK</span><span class="badge badge-acc">2025</span></div>
+      </div>
+    </div>
+    <div class="pal-meta">
+      <h3><span class="swatch" style="background:#0a0a0a; border:1px solid #555"></span>D — Pure Mono</h3>
+      <p>No accent at all. Black + cream only. Maximum brutalist purity. Confident — but harder to land without exceptional type.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:24px">My recommendation: <strong>A — Signal Red</strong>. It carries the dvdrod heat you were drawn to, lands on a brutalist cream base hard, and reads as confident-not-cliché for a Senior Architect.</p>

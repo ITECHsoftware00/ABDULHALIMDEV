@@ -1,0 +1,104 @@
+<h2>Top 6 projects to feature</h2>
+<p class="subtitle">Curated for Senior Software Architect credibility. Big brands first, then range. The other 16 go into a small "Browse all" archive at the bottom.</p>
+
+<style>
+  .pj-list { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+  .pj { display:grid; grid-template-columns:48px 1fr; gap:14px; padding:16px 18px; background:#f5f1e8; color:#0a0a0a; border:1px solid #0a0a0a; border-radius:8px; font-family:ui-monospace,'SF Mono',monospace; }
+  .pj-num { font-family:'Arial Black',sans-serif; font-size:28px; font-weight:900; line-height:1; color:#ff3b14; }
+  .pj-body h3 { margin:0 0 4px; font-family:'Arial Black',sans-serif; font-size:15px; letter-spacing:-.02em; text-transform:uppercase; }
+  .pj-body .cat { font-size:9px; text-transform:uppercase; opacity:.6; margin-bottom:6px; }
+  .pj-body p { margin:0 0 8px; font-size:11px; line-height:1.5; opacity:.8; }
+  .pj-body .stack { display:flex; flex-wrap:wrap; gap:4px; }
+  .pj-body .stack span { font-size:9px; padding:2px 6px; border:1px solid #0a0a0a; }
+  .anim-list { background:#0a0a0a; color:#f5f1e8; padding:18px 22px; margin:22px 0; border-radius:8px; font-family:ui-monospace,monospace; }
+  .anim-list h3 { margin:0 0 10px; font-family:'Arial Black',sans-serif; color:#ff3b14; font-size:14px; text-transform:uppercase; letter-spacing:.05em; }
+  .anim-list ul { margin:0; padding-left:18px; font-size:12px; line-height:1.7; }
+  .anim-list code { color:#c8ff00; font-size:11px; }
+  .extras { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px; }
+  .extra { background:transparent; border:1px dashed #0a0a0a; padding:12px 14px; font-family:ui-monospace,monospace; font-size:11px; }
+  .extra strong { display:block; font-family:'Arial Black',sans-serif; font-size:13px; text-transform:uppercase; margin-bottom:4px; color:#ff3b14; }
+</style>
+
+<div class="pj-list">
+
+  <div class="pj">
+    <div class="pj-num">01</div>
+    <div class="pj-body">
+      <h3>Houzz</h3>
+      <div class="cat">Home & Design · Marketplace</div>
+      <p>Scalable architectural mapping + matching algorithms between homeowners and pros.</p>
+      <div class="stack"><span>React</span><span>Redux</span><span>Node.js</span><span>Elasticsearch</span></div>
+    </div>
+  </div>
+
+  <div class="pj">
+    <div class="pj-num">02</div>
+    <div class="pj-body">
+      <h3>Gordon Ramsay Restaurants</h3>
+      <div class="cat">Luxury Hospitality</div>
+      <p>Frontend engineering for global luxury restaurant chains. Multi-brand digital experience.</p>
+      <div class="stack"><span>Next.js</span><span>Tailwind</span><span>Framer Motion</span></div>
+    </div>
+  </div>
+
+  <div class="pj">
+    <div class="pj-num">03</div>
+    <div class="pj-body">
+      <h3>Hotwire</h3>
+      <div class="cat">Travel · E-Commerce</div>
+      <p>High-volume booking engines and secure payment gateways. Zero-downtime at peak.</p>
+      <div class="stack"><span>React</span><span>Node.js</span><span>Microservices</span><span>Docker</span></div>
+    </div>
+  </div>
+
+  <div class="pj">
+    <div class="pj-num">04</div>
+    <div class="pj-body">
+      <h3>Future Fitness</h3>
+      <div class="cat">Health · SaaS</div>
+      <p>Lead architecture for high-performance training platform. Real-time coaching at scale.</p>
+      <div class="stack"><span>React</span><span>TypeScript</span><span>Node.js</span><span>AWS</span></div>
+    </div>
+  </div>
+
+  <div class="pj">
+    <div class="pj-num">05</div>
+    <div class="pj-body">
+      <h3>ProHouse Platform</h3>
+      <div class="cat">Web3 · Real Estate</div>
+      <p>Decentralized real estate via NFTs. Smart contracts for fractional property ownership.</p>
+      <div class="stack"><span>Solidity</span><span>React</span><span>IPFS</span></div>
+    </div>
+  </div>
+
+  <div class="pj">
+    <div class="pj-num">06</div>
+    <div class="pj-body">
+      <h3>Butterfly iQ</h3>
+      <div class="cat">Medical · Imaging</div>
+      <p>Whole-body ultrasound imaging app. Real-time imaging + cloud integration.</p>
+      <div class="stack"><span>C++</span><span>Swift</span><span>Kotlin</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="anim-list">
+  <h3>The "best animation" plan for the work section</h3>
+  <ul>
+    <li><code>on enter</code> — each card slides up + fades in, staggered 80ms (Framer Motion <code>useInView</code>)</li>
+    <li><code>on hover</code> — image scrubs (subtle scale 1.04) + tech pills shift right + accent underline expands left → right</li>
+    <li><code>cursor</code> — custom cursor morphs from "Guest 👋" into a circular "VIEW →" arrow when over a card (the dvdrod move)</li>
+    <li><code>scroll</code> — image inside card parallaxes -8% relative to scroll (Lenis + transform)</li>
+    <li><code>click</code> — card scales to 0.97 then opens external link in new tab (no modal — keeps it brutalist)</li>
+    <li><code>focus</code> — keyboard tab adds 2px signal-red outline; everything is screen-reader labeled</li>
+  </ul>
+</div>
+
+<div class="extras">
+  <div class="extra"><strong>Services (7)</strong>I'll bake your 7 services into the About / Stack section as a numbered list with the same number-card style.</div>
+  <div class="extra"><strong>Pillars (4)</strong>Security First · Speed & Scale · Design Legacy · Strategic Code — render as a 4-up grid below the hero.</div>
+  <div class="extra"><strong>Testimonials (3)</strong>Sarah Chen · James Ramsay · Marco Rossi — adding a "Testimonials" section between Experience and Contact.</div>
+</div>
+
+<p class="subtitle" style="margin-top:18px"><strong>Bonus structural change:</strong> I'm adding two sections you didn't have in the approved 7 — <strong>Pillars</strong> (right after hero, hits hard) and <strong>Testimonials</strong> (before contact, closes the deal). Trust me on these — they're high-impact for hiring managers. Total sections: 9.</p>

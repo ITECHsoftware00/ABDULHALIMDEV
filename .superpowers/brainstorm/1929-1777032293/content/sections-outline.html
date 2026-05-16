@@ -1,0 +1,110 @@
+<h2>Proposed page sections</h2>
+<p class="subtitle">One long scroll. Each block below is a section. Tell me to add, remove, or reorder.</p>
+
+<style>
+  .sec-outline { display:flex; flex-direction:column; gap:14px; max-width:760px; margin:24px 0; }
+  .sec { display:grid; grid-template-columns:60px 1fr 110px; gap:18px; align-items:center; padding:18px 20px; background:#f5f1e8; color:#0a0a0a; border:1px solid #0a0a0a; border-radius:8px; font-family:ui-monospace,'SF Mono',monospace; }
+  .sec-num { font-family:'Arial Black',sans-serif; font-size:32px; font-weight:900; line-height:1; }
+  .sec-body h3 { margin:0 0 4px; font-family:'Arial Black',sans-serif; font-size:18px; letter-spacing:-.02em; text-transform:uppercase; }
+  .sec-body p { margin:0; font-size:12px; opacity:.7; line-height:1.5; }
+  .sec-tag { font-size:9px; text-transform:uppercase; padding:4px 8px; border:1px solid #0a0a0a; text-align:center; }
+  .sec.optional { background:transparent; border-style:dashed; opacity:.7; }
+  .sec.required { background:#ff3b14; color:#0a0a0a; border-color:#0a0a0a; }
+  .sec.required .sec-tag { border-color:#0a0a0a; background:#0a0a0a; color:#ff3b14; }
+  .legend { display:flex; gap:18px; font-family:ui-monospace,monospace; font-size:11px; margin-top:8px; }
+  .legend span { display:flex; align-items:center; gap:6px; }
+  .legend i { width:12px; height:12px; display:inline-block; }
+</style>
+
+<div class="legend">
+  <span><i style="background:#ff3b14;border:1px solid #0a0a0a"></i>Hero / Required</span>
+  <span><i style="background:#f5f1e8;border:1px solid #0a0a0a"></i>Recommended</span>
+  <span><i style="background:transparent;border:1px dashed #0a0a0a"></i>Optional</span>
+</div>
+
+<div class="sec-outline">
+
+  <div class="sec required">
+    <div class="sec-num">01</div>
+    <div class="sec-body">
+      <h3>Hero</h3>
+      <p>Massive type: "Abdulhalim Muhammad". Role tagline. Location. Available-for-work pill. Custom cursor active. Scroll cue.</p>
+    </div>
+    <div class="sec-tag">Hero</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-num">02</div>
+    <div class="sec-body">
+      <h3>About</h3>
+      <p>3-4 sentences. Years of experience. What you build. Photo (optional). "View CV" link.</p>
+    </div>
+    <div class="sec-tag">About</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-num">03</div>
+    <div class="sec-body">
+      <h3>Selected Work</h3>
+      <p>3-6 project case studies. Big image, title, year, tech badges, 1-2 metrics. Hover scrubs / scales. Click → live URL or repo.</p>
+    </div>
+    <div class="sec-tag">Work</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-num">04</div>
+    <div class="sec-body">
+      <h3>Stack &amp; Expertise</h3>
+      <p>Grouped: Languages, Frameworks, Databases, Cloud, AI/ML. Marquee or grid. The "what I work with" credibility block.</p>
+    </div>
+    <div class="sec-tag">Stack</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-num">05</div>
+    <div class="sec-body">
+      <h3>Experience Timeline</h3>
+      <p>Roles + years, right-aligned dates. Like dvdrod's. Subtle reveal on scroll.</p>
+    </div>
+    <div class="sec-tag">Experience</div>
+  </div>
+
+  <div class="sec optional">
+    <div class="sec-num">06</div>
+    <div class="sec-body">
+      <h3>Open Source / GitHub</h3>
+      <p>OPTIONAL. Pinned repos, stars, contributions graph. Strong signal for an Architect role. Skip if your GitHub is sparse.</p>
+    </div>
+    <div class="sec-tag">Optional</div>
+  </div>
+
+  <div class="sec optional">
+    <div class="sec-num">07</div>
+    <div class="sec-body">
+      <h3>Writing / Talks</h3>
+      <p>OPTIONAL. Links to articles, talks, conferences. Skip if you don't write/speak publicly.</p>
+    </div>
+    <div class="sec-tag">Optional</div>
+  </div>
+
+  <div class="sec required">
+    <div class="sec-num">08</div>
+    <div class="sec-body">
+      <h3>Contact CTA</h3>
+      <p>Massive "Say hi! / Let's talk" type. Email link. Magnetic hover. Same energy as dvdrod's footer.</p>
+    </div>
+    <div class="sec-tag">Contact</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-num">09</div>
+    <div class="sec-body">
+      <h3>Footer</h3>
+      <p>Socials (GitHub / LinkedIn / X), local time clock, "Built with Next.js + Tailwind", copyright.</p>
+    </div>
+    <div class="sec-tag">Footer</div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:18px"><strong>My default:</strong> ship 01-05 + 08-09. Skip 06 and 07 unless you have content. Fixed top nav: Logo · Work · About · Contact · Theme toggle.</p>
