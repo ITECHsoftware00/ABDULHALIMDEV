@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400..800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -5,10 +6,9 @@
   --color-fg: rgb(10 10 10);
   --color-accent: rgb(255 59 20);
   --color-muted: rgb(130 125 115);
-  --color-line: rgb(10 10 10);
-  --font-display: var(--font-trois-mille), var(--font-beatrice-display), var(--font-syne), system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
-  --font-body: var(--font-beatrice), var(--font-inter), system-ui, sans-serif;
+  --font-body: var(--font-manrope), system-ui, sans-serif;
 }
 
 :root {
@@ -17,6 +17,10 @@
   --accent: 255 59 20;
   --muted: 130 125 115;
   --line: 10 10 10;
+
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+  --font-manrope: 'Manrope', sans-serif;
 }
 
 .dark {

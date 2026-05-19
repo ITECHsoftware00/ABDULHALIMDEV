@@ -5,6 +5,7 @@ export type Project = {
   description: string;
   tech: string[];
   image?: string;
+  images?: string[];
   liveUrl?: string;
   year?: string;
   status?: "Live" | "Case study" | "Work in progress";
@@ -31,7 +32,7 @@ export const content = {
       github: "https://github.com/ITECHsoftware00",
     },
     cvUrl: "/cv.html",
-    avatarUrl: "/avatar.webp", // TODO: drop file in /public
+    avatarUrl: "/profile.jpeg", // Using the updated profile picture
   },
 
   about: `Backend & Full-Stack Developer with 4+ years delivering production-grade APIs, real-time apps, and blockchain platforms for clients across UAE, Nigeria, and Europe. I've shipped 15+ projects end-to-end — authentication systems, crypto payment gateways, DeFi smart contracts — with a relentless focus on security, scale, and clean architecture.`,
@@ -82,34 +83,8 @@ export const content = {
         "High-fidelity digital flagship prototype for a luxury perfume brand. Designed with a 'Classic Luxury' aesthetic, combining sophisticated typography, cinematic imagery, and seamless interactive experiences.",
       tech: ["HTML5", "CSS3", "JavaScript", "Intersection Observer"],
       highlights: ["Multi-Page Journey", "AJAX 'Quick Add'", "Sample Logic", "Persistent Selection"],
-      image: "/elysian-preview.png",
+      images: ["/elysian-1.png", "/elysian-2.png", "/elysian-3.png", "/elysian-4.png"],
       liveUrl: "https://github.com/ITECHsoftware00/ELYSIAN-store.git",
-    },
-    {
-      id: "houzz",
-      title: "Houzz",
-      category: "Home & Design · Marketplace",
-      year: "2022",
-      status: "Live",
-      description:
-        "Scalable architectural mapping and matching algorithms between homeowners and design professionals. Optimized search performance and user experience for a global marketplace.",
-      tech: ["React", "Redux", "Node.js", "Elasticsearch"],
-      highlights: ["Matching algorithms", "High-performance search", "Global scale", "Microservices"],
-      image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
-      liveUrl: "https://www.houzz.com/",
-    },
-    {
-      id: "gordon-ramsay",
-      title: "Gordon Ramsay Restaurants",
-      category: "Luxury Hospitality · Brand Site",
-      year: "2023",
-      status: "Live",
-      description:
-        "Frontend engineering for global luxury restaurant chains. Developed a multi-brand digital experience with sophisticated motion and a high-end aesthetic.",
-      tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
-      highlights: ["Multi-brand architecture", "Premium motion design", "Performance optimization", "SEO"],
-      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop",
-      liveUrl: "https://www.gordonramsayrestaurants.com/",
     },
   ] satisfies Project[],
 

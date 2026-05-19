@@ -1,47 +1,36 @@
-import { Syne, JetBrains_Mono, Inter } from "next/font/google";
-import localFont from "next/font/local";
+// Brand Fonts (Static definitions to bypass Next.js build-time network requests)
+export const troisMille = {
+  variable: "var-font-trois-mille",
+  className: "font-trois-mille",
+  style: { fontFamily: "var(--font-trois-mille)" },
+};
 
-// Brand Fonts (Local)
-// Note: Ensure the corresponding .woff2 files are placed in public/fonts/
-export const troisMille = localFont({
-  src: "../public/fonts/TroisMille-Regular.woff2",
-  variable: "--font-trois-mille",
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-});
+export const beatriceDisplay = {
+  variable: "var-font-beatrice-display",
+  className: "font-beatrice-display",
+  style: { fontFamily: "var(--font-beatrice-display)" },
+};
 
-export const beatriceDisplay = localFont({
-  src: "../public/fonts/BeatriceDisplay-Medium.woff2",
-  variable: "--font-beatrice-display",
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-});
+export const beatrice = {
+  variable: "var-font-beatrice",
+  className: "font-beatrice",
+  style: { fontFamily: "var(--font-beatrice)" },
+};
 
-export const beatrice = localFont({
-  src: "../public/fonts/Beatrice-Regular.woff2",
-  variable: "--font-beatrice",
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-});
+export const syne = {
+  variable: "var-font-syne",
+  className: "font-syne",
+  style: { fontFamily: "var(--font-syne)" },
+};
 
-// Fallback Google Fonts
-export const syne = Syne({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-syne",
-  display: "swap",
-});
+export const jetbrainsMono = {
+  variable: "var-font-jetbrains-mono",
+  className: "font-jetbrains-mono",
+  style: { fontFamily: "var(--font-jetbrains-mono)" },
+};
 
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
-export const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-});
+export const inter = {
+  variable: "var-font-inter",
+  className: "font-inter",
+  style: { fontFamily: "var(--font-inter)" },
+};

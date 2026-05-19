@@ -110,8 +110,29 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         className="md:col-span-7 block relative bg-[rgb(var(--muted))] overflow-hidden"
         data-cursor={project.liveUrl ? "link" : undefined}
       >
-        <div className="aspect-[4/3] md:aspect-auto md:h-full md:min-h-[480px] overflow-hidden">
-          {project.image ? (
+        <div className="aspect-[4/3] md:aspect-auto md:h-full md:min-h-[480px] overflow-hidden relative">
+          {project.images && project.images.length > 0 ? (
+            <div className="flex h-full w-full overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              {project.images.map((img, idx) => (
+                <div key={idx} className="flex-none w-full h-full snap-center relative overflow-hidden">
+                  <motion.img
+                    src={img}
+                    alt={`${project.title} screenshot ${idx + 1}`}
+                    loading="lazy"
+                    className="size-full object-cover"
+                    whileHover={reduce ? undefined : { scale: 1.04 }}
+                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  />
+                </div>
+              ))}
+              {/* Pagination Dots Indicator */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 pointer-events-none">
+                {project.images.map((_, idx) => (
+                  <div key={idx} className="w-1.5 h-1.5 rounded-full bg-white/40 shadow-sm" />
+                ))}
+              </div>
+            </div>
+          ) : project.image ? (
             <motion.img
               src={project.image}
               alt={project.title}
